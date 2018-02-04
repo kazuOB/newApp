@@ -1,0 +1,19 @@
+
+<%= form_for @post do |f| %>
+<p>
+  <%= f.text_field :title, placeholder: 'enter title' %>
+  <% if @post.errors.messages[:title].any?  %>
+  <span class="error"><%= @post.errors.messages[:title][0] %></span>
+  <% end %>
+</p>
+<p>
+  <%= f.text_area :body, placeholder: 'enter body text' %>
+  <% if @post.errors.messages[:body].any?  %>
+  <span class="error"><%= @post.errors.messages[:body][0] %></span>
+  <% end %>
+</p>
+<p>
+  <%= f.submit 'SUBMIT'%>
+</p>
+
+<% end %>

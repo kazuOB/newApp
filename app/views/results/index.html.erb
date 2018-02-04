@@ -1,0 +1,59 @@
+<!-- Wrapper -->
+                  <div class="table-wrapper">
+                    <h2>Results</h2>
+                    <table>
+                      <tbody>
+                        <!-- <tr>
+                          <td>順位</td>
+                          <td>13位</td>
+                        </tr> -->
+                        <tr>
+                          <td>正答数</td>
+                          <td><%= @right_answer_num %>/<%= @all_answer_num %></td>
+                        </tr>
+                        <tr>
+                          <td>時間</td>
+                          <td><%= @test_time %></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div><!-- class="table-wrapper" -->
+                  <h1><%= link_to 'RESTART' , test2s_path %></h1>
+                  <p><%= link_to 'もう一度テストを行う' , test2s_path %></p>
+            <!-- Table -->
+                  <div class="table-wrapper">
+                    <h2>Details</h2>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>result</th>
+                          <th>word</th>
+                          <th>your answer</th>
+                          <th>right answer</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% @test2s.each do |test2| %>
+                        <tr>
+                          <td>
+                            <% if test2.user_answer == test2.right_answer %>
+                              ◎
+                            <% else %>
+                              ✖︎
+                            <% end %>
+                          </td>
+                          <td><%= test2.word %></td>
+                          <td><%= test2.user_answer %></td>
+                          <td><%= test2.right_answer %></td>
+                        </tr>
+                        <% end %>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td colspan="4"></td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div><!-- class="table-wrapper" -->
+<h1><%= link_to 'RESTART' , test2s_path %></h1>
+<p><%= link_to 'もう一度テストを行う' , test2s_path %></p>

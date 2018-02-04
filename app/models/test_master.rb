@@ -1,0 +1,2 @@
+class TestMaster < ApplicationRecord
+end

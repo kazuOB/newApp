@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rank: MyString
+  right_answer_num: MyString
+  test_time: MyString
+
+two:
+  rank: MyString
+  right_answer_num: MyString
+  test_time: MyString

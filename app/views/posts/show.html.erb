@@ -1,0 +1,28 @@
+<h2><%= @post.title %></h2>
+<p><%= simple_format @post.body %></p>
+
+<h3>Comments</h3>
+
+<% if @post.comments.any? %>
+<ul>
+  <% @post.comments.each do |comment| %>
+  <li>
+    <%= comment.body %>
+    <%= link_to '[X]', post_comment_path(@post, comment), 
+    method: :delete,
+    class: 'command',
+    data:{ confirm: 'Sure?' } %>
+  </li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for ([@post,@post.comments.build])  do |f| %>
+<p>
+  <%= f.text_field :body %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>

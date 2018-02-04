@@ -1,0 +1,36 @@
+<h2><%= link_to 'RESTART' , test2s_path %></h2>
+<!-- indexのviewと完全に同じだからどっちかに統一させる -->
+<h3><%= @test2.word_num.to_i + 1 %> / 10</h3>
+<h1><%= @test2.word %></h1>
+
+<%= form_for @test2 ,html: {name: 'test2_form'} do |f| %>
+  <%= f.hidden_field :id, :id => 'id' , :value => @test2.id %>
+  <%= f.hidden_field :word, :id => 'word' , :value => @test2.word %>
+  <%= f.hidden_field :test_num, :id => 'test_num', :value => @test2.test_num %>
+  <%= f.hidden_field :word_num, :id => 'word_num', :value => @test2.word_num %>
+  <%= f.hidden_field :user_answer, :id => 'user_answer'%>
+  
+  <ul class="actions vertical">
+    
+    <li><%= f.button @test2.answer1, :type => 'button', :class =>'big wide smooth-scroll-middle', :name => 'user_answer',  onclick: "disp('answer1')"%></li>
+    <%= hidden_field_tag 'answer1', @test2.answer1 %>  
+    
+    <li><%= f.button @test2.answer2, :type => 'submit', :class =>'big wide smooth-scroll-middle', :name => 'user_answer',  onclick: "disp('answer2')" %></li>
+    <%= hidden_field_tag 'answer2', @test2.answer2 %>
+    
+    <li><%= f.button @test2.answer3, :type => 'submit', :class =>'big wide smooth-scroll-middle', :name => 'user_answer',  onclick: "disp('answer3')" %></li>
+    <%= hidden_field_tag 'answer3', @test2.answer3 %>
+    
+    <li><%= f.button @test2.answer4, :type => 'submit', :class =>'big wide smooth-scroll-middle', :name => 'user_answer',  onclick: "disp('answer4')" %></li>
+    <%= hidden_field_tag 'answer4', @test2.answer4 %>
+  </ul>
+
+  <%= javascript_tag do %>
+  function disp(answer){
+    var user_answer = document.getElementById(answer).value;
+    document.getElementById('user_answer').value = user_answer;
+    document.test2_form.submit()
+  }
+  <% end %>
+
+<% end %>
