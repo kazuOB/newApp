@@ -10,22 +10,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    
-    <!-- Scripts -->
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag 'jquery.min.js'  %>
-    <%= javascript_include_tag 'jquery.scrollex.min.js' %>
-    <%= javascript_include_tag 'jquery.scrolly.min.js' %>
-    <%= javascript_include_tag 'skel.min.js' %>
-    <%= javascript_include_tag 'util.js' %>
-    <%= javascript_include_tag 'main.js' %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112396628-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-112396628-1');
     </script>
   </head>
@@ -50,24 +40,28 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
           </script>
           <!-- Footer -->
           <footer class="wrapper style1 align-center">
-            <div class="inner">
-              <!-- TODO 本番環境でアイコンがうまく表示されないので一時的にコメントアウト -->
-              <!-- <ul class="icons">
+            <div class="inner"
+              <ul class="icons">
 								<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
 								<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
 								<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
 								<li><a href="#" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
 								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
-							</ul> -->
-              
+							</ul>
               <p>&copy; 2013 New General Service List:Browne, C., Culligan, B., and Phillips, J.</p>
               <p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
             </div>
           </footer>
-
       </div>
 
-    
+      <!-- Scripts -->
+      <%= javascript_include_tag 'application' %>
+      <%= javascript_include_tag 'jquery.min.js'  %>
+      <%= javascript_include_tag 'jquery.scrollex.min.js' %>
+      <%= javascript_include_tag 'jquery.scrolly.min.js' %>
+      <%= javascript_include_tag 'skel.min.js' %>
+      <%= javascript_include_tag 'util.js' %>
+      <%= javascript_include_tag 'main.js' %>
       
   </body>
 </html>
