@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :find_from_params, only: [:create, :destory]
+  before_action :find_from_params, only: [:create, :destroy]
 
   def create
     @post.comments.create(comment_params)
