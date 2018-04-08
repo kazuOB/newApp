@@ -1,24 +1,11 @@
-# README
+# Ruby on Rails 5.1.4
+# Ruby 2.3.3
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rubyのコーディング規約
+https://github.com/cookpad/styleguide/blob/master/ruby.ja.md
 
-Things you may want to cover:
+## commitのprefixには絵文字をつけよう！
+https://gitmoji.carloscuesta.me/
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発フローはgit-flow
+https://qiita.com/KosukeSone/items/514dd24828b485c69a05
