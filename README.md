@@ -9,3 +9,6 @@ https://gitmoji.carloscuesta.me/
 
 ## 開発フローはgit-flow
 https://qiita.com/KosukeSone/items/514dd24828b485c69a05
+
+## なるべくテストを書いてTDDしよう
+http://magazine.rubyist.net/?0035-RSpecInPractice
