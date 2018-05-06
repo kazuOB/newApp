@@ -5,9 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
+gem 'bcrypt', '~>3.1.7'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
 # 本番ではpostgressを使用する
@@ -41,6 +41,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'minitest', '~> 5.10.1'
 end
 
 group :development do
@@ -56,3 +57,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'non-stupid-digest-assets'
+gem 'rails-controller-testing'
