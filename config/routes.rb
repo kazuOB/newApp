@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   get 'test1/index'
 
   get 'page/index'
@@ -12,6 +14,7 @@ Rails.application.routes.draw do
   resources:pages
   resources:results
   resources:test2s
+  resources:users
   
   # いらないけどトップページを新しく作るの面倒だからこのルーティングは残しておく
   root 'test2s#index'

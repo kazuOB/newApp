@@ -25,7 +25,11 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         <!-- One -->
           <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
             <div class="content">
+              <% flash.each do |message_type, message| %>
+                <div class="alert alert-<%= message_type %>"><%= message %></div>
+              <% end %>
               <%= yield %>
+              <%= debug(params) if Rails.env.development? %>
               
               <ul class="icons">
 								<li><a href="https://twitter.com/share" class="icon style2 fa-twitter" data-text=""><span class="label">Twitter</span></a></li>
